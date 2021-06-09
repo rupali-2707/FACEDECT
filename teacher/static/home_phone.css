@@ -1,0 +1,10 @@
+.right{
+    background-color: rgb(4, 14, 59);
+    width: 100%;
+}
+.left{
+    display: none;
+    background-color: rgb(252, 251, 250);
+    width: 50%;
+    
+    }

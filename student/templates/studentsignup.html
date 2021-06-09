@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block content %}
+{% load widget_tweaks %}
+{% load static %}
+
+
+<head>
+  <meta charset="utf-8">
+  <title>Student Signup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- MATERIAL DESIGN ICONIC FONT -->
+  <link rel="stylesheet" href="{% static "fonts/material-design-iconic-font/css/material-design-iconic-font.min.css" %}">
+
+  <!-- STYLE CSS -->
+  <link rel="stylesheet" href="{% static "css/style_signup.css" %}">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="inner">
+      <div class="image-holder">
+        <img src="{% static "images/dect.jpg" %}" alt="">
+      </div>
+      <form method="POST" autocomplete="off" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h3>STUDENT SIGNUP</h3>
+        <div class="form-group">
+          {% render_field userForm.first_name|attr:'required:true'  class="form-control" placeholder="First Name" %}
+          {% render_field userForm.last_name|attr:'required:true'  class="form-control" placeholder="Last Name" %}
+        </div>
+        <div class="form-wrapper">
+          {% render_field userForm.username|attr:'required:true'  class="form-control" placeholder="Username" %}
+          <i class="zmdi zmdi-account"></i>
+        </div>
+        <div class="form-wrapper">
+          {% render_field studentForm.email|attr:'required:true'  class="form-control" placeholder="Email" %}
+          <i class="zmdi zmdi-email"></i>
+        </div>
+        <div class="form-wrapper">
+          {% render_field studentForm.mobile|attr:'required:true'  class="form-control" placeholder="Mobile" %}
+          <i class="zmdi zmdi-smartphone" style="font-size: 17px"></i>
+        </div>
+        <div class="form-wrapper">
+          {% render_field userForm.password|attr:'required:true'  class="form-control" placeholder="Password" %}
+          <i class="zmdi zmdi-lock"></i>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+ 
+      </form>
+    </div>
+  </div>
+  
+</body>
+
+
+
+
+
+{% endblock %}

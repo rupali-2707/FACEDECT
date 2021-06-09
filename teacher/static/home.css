@@ -1,0 +1,51 @@
+body{
+    margin:0;
+    padding: 0;
+
+}
+/*first container*/
+#container{
+    display: flex;
+    height: 78%;
+}
+/*class for left part inside the container*/
+.left{
+    background-color: rgb(252, 251, 250);
+    width: 55%;
+
+
+}
+/*code for the image */
+.left img{
+    width:100%;
+    height:100%;
+    border-radius: 0px;
+}
+.image{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+/*class for right part inside the container*/
+.right{
+    background-color:rgb(4, 14, 59);
+    /* background-color:	  	 	 #ff8080; */
+    /* background-color:	 #3366ff; */
+    width: 45%;
+
+}
+/*end of container and left or side parts*/
+
+/*created content class inside the right part*/
+.content {
+    display: flex;
+}
+
+.cc{
+    padding-top: 200px;
+    padding-left: 80px;
+    color: white;
+    padding-right: 30px;
+    padding-bottom: 100px;
+}

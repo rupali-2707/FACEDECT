@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+
+
+
+<head>
+<title>HOME</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "home.css" %}">
+    <link rel="stylesheet" media="screen and (max-width:600px)" href="{% static "home_phone.css"%}">
+
+</head>
+
+    <div id="container">
+        <div class="left">
+            <div class="image">
+                <img src="{% static "home.jpg" %}" alt="image">
+
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="content">
+                <div class="cc">
+                <br><br><br>
+                    <h2 align='center'>Welcome to FACEDECT!!</h2>
+                    <br><br><br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, repellat.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit inventore nobis totam
+                        ipsa accusamus quis.
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident illum impedit beatae!
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
